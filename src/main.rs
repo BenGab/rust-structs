@@ -12,6 +12,13 @@ impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }
+
+    fn square(size: u32) -> Self {
+        Self {
+            height: size,
+            width: size,
+        }
+    }
 }
 
 fn main() {
@@ -30,9 +37,12 @@ fn main() {
         width: 40,
     };
 
+    let rect4 = Rectangle::square(10);
+
     dbg!(&rect1);
     println!("The are of rectangle is {} square pixels.", rect1.area());
     println!("The rect1 can hold rect2 {}", rect1.can_hold(&rect2));
     println!("The rect1 can hold rect3 {}", rect1.can_hold(&rect3));
+    println!("The rect1 can hold rect4 {}", rect1.can_hold(&rect4));
 }
 
