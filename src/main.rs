@@ -10,7 +10,7 @@ fn main() {
         width: 50,
     };
 
-    println!("The rect1 is {:?}", rect1);
+    dbg!(&rect1);
     println!("The are of rectangle is {} square pixels.", area(&rect1));
 }
 
